@@ -9,15 +9,15 @@ echo "What is the name of the city or town where you were born?"
 read A2
 
 # Q3
-echo "What is the name of the city or town where you were born?"
+echo "How many siblings do you have?"
 read A3
 
 # Q4
-echo "What is the name of the city or town where you were born?"
+echo "How old are you?"
 read A4
 
 # Q5
-echo "What is the name of the city or town where you were born?"
+echo "What is the name of your major/program?"
 read A5
 
 ID=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 6 | head -n 1)
@@ -26,5 +26,4 @@ echo $ID
 DATE=$(date +"%m-%d-%Y")	
 echo $DATE
 
-
-(echo "Date;Visit;Login;Euro;Rate" ; cat script.sh) | sed 's/;/<tab>/g' > file.csv
+echo $A1 $A2 $A3 $A4 $A5 $ID $DATE >>  answers.csv
