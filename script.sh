@@ -20,7 +20,7 @@ read A4
 echo "What is the name of your major/program?"
 read A5
 
-# Unique Identifyer
+# Unique Identifier
 ID=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 6 | head -n 1)
 
 # Date
