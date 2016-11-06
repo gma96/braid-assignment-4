@@ -20,8 +20,10 @@ read A4
 echo "What is the name of your major/program?"
 read A5
 
+# Unique Identifyer
 ID=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 6 | head -n 1)
 
+# Date
 DATE=$(date +"%m-%d-%Y")	
 
 echo $A1, $A2, $A3, $A4, $A5, $ID, $DATE >>  answers.csv
