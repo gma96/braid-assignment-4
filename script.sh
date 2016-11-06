@@ -21,9 +21,7 @@ echo "What is the name of your major/program?"
 read A5
 
 ID=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 6 | head -n 1)
-echo $ID
 
 DATE=$(date +"%m-%d-%Y")	
-echo $DATE
 
-echo $A1 $A2 $A3 $A4 $A5 $ID $DATE >>  answers.csv
+echo $A1, $A2, $A3, $A4, $A5, $ID, $DATE >>  answers.csv
